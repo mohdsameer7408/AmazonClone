@@ -13,11 +13,26 @@
   margin-right: 5px;
 }
 
+.carousel-root {
+  margin-bottom: -150px !important;
+  mask-image: linear-gradient(
+    to bottom,
+    rgba(0, 0, 0, 1),
+    rgba(0, 0, 0, 0)
+  ) !important;
+}
+
 .home_image {
   width: 100%;
   z-index: -1;
-  margin-bottom: -150px;
-  mask-image: linear-gradient(to bottom, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0));
+  /* mask-image: linear-gradient(to bottom, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0)); */
+}
+
+.control-arrow {
+  height: 50px;
+  width: 50px;
+  border-radius: 50%;
+  top: 30% !important;
 }
 
 .dismissibles {
@@ -40,9 +55,17 @@
 }
 
 @media only screen and (max-width: 1300px) {
-  .home_image {
+  /* .home_image {
     margin-bottom: -70px;
+  } */
+
+  .carousel-root {
+    margin-bottom: -70px !important;
   }
+
+  /* .control-arrow {
+    display: none;
+  } */
 
   .home_row {
     flex-direction: column;

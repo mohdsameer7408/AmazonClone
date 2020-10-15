@@ -1,6 +1,8 @@
 import React, { useState } from "react";
 import "../assets/css/Home.css";
 import Product from "./Product";
+import "react-responsive-carousel/lib/styles/carousel.min.css";
+import { Carousel } from "react-responsive-carousel";
 
 function Home() {
   const [dismissible, setDismissible] = useState([]);
@@ -15,11 +17,29 @@ function Home() {
   return (
     <div className="home">
       <div className="home_container">
-        <img
-          className="home_image"
-          src="https://images-eu.ssl-images-amazon.com/images/G/02/digital/video/merch2016/Hero/Covid19/Generic/GWBleedingHero_ENG_COVIDUPDATE__XSite_1500x600_PV_en-GB._CB428684220_.jpg"
-          alt="amazon-banner"
-        />
+        <Carousel
+          showIndicators={false}
+          showStatus={false}
+          showThumbs={false}
+          autoPlay={true}
+          infiniteLoop={true}
+        >
+          <img
+            className="home_image"
+            src="https://images-eu.ssl-images-amazon.com/images/G/02/digital/video/merch2016/Hero/Covid19/Generic/GWBleedingHero_ENG_COVIDUPDATE__XSite_1500x600_PV_en-GB._CB428684220_.jpg"
+            alt="amazon-banner"
+          />
+          <img
+            className="home_image"
+            src="https://images-na.ssl-images-amazon.com/images/G/01/AmazonExports/Fuji/2020/October/Fuji_Tallhero_Dash_en_US_1x._CB418727898_.jpg"
+            alt="amazon-banner"
+          />
+          <img
+            className="home_image"
+            src="https://images-na.ssl-images-amazon.com/images/G/01/AmazonExports/Fuji/2020/May/Hero/Fuji_TallHero_Toys_en_US_1x._CB431858161_.jpg"
+            alt="amazon-banner"
+          />
+        </Carousel>
         <div className="home_row">
           <Product
             id={1}
